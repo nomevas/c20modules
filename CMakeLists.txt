@@ -1,5 +1,4 @@
-cmake_minimum_required(VERSION 3.22)
-project(c__modules)
+project(std_modules)
 
 set(CMAKE_CXX_STANDARD 23)
 
@@ -17,5 +16,5 @@ function(prepare_for_module TGT)
     add_dependencies(${TGT} std_modules)
 endfunction()
 
-add_executable(std_modules_example std_modules/main.cpp)
+add_executable(std_modules_example main.cpp)
 prepare_for_module(std_modules_example)
